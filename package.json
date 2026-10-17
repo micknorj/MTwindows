@@ -1,0 +1,41 @@
+{
+  "name": "rimmile",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --config frontend/vite.config.ts --host 127.0.0.1",
+    "typecheck": "tsc --noEmit -p frontend/tsconfig.json",
+    "validate:vehicle": "node frontend/scripts/validate-vehicle.mjs",
+    "test": "vitest run --config frontend/vitest.config.ts",
+    "test:browser": "playwright test --config frontend/playwright.config.ts",
+    "test:production": "playwright test --config frontend/playwright.production.config.ts",
+    "build:assets": "node scripts/build-assets.mjs",
+    "build": "npm run build:assets && npm run build:frontend",
+    "preview": "vite preview --config frontend/vite.config.ts --host 127.0.0.1",
+    "assets:dev": "node scripts/wrangler.mjs dev --config wrangler.jsonc --port 8787 --local",
+    "assets:dry-run": "node scripts/wrangler.mjs deploy --config wrangler.jsonc --dry-run --outdir dist/wrangler",
+    "assets:deploy": "node scripts/wrangler.mjs deploy --config wrangler.jsonc",
+    "audit:release": "node scripts/audit-release.mjs",
+    "smoke:assets": "node scripts/smoke-assets.mjs",
+    "clean": "node scripts/clean-outputs.mjs",
+    "test:release": "npm run build:assets && playwright test --config frontend/playwright.release.config.ts",
+    "build:frontend": "npm run typecheck && vite build --config frontend/vite.config.ts && node scripts/validate-build.mjs",
+    "pack:vehicle": "node scripts/pack-vehicle.mjs",
+    "pack:engine": "node scripts/pack-engine.mjs"
+  },
+  "dependencies": {
+    "@fontsource/playfair-display": "^5.3.0",
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.0",
+    "@types/node": "^26.6.5",
+    "@types/three": "^0.186.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4",
+    "vitest": "^5.0.3",
+    "wrangler": "4.151.0"
+  },
+  "license": "UNLICENSED"
+}

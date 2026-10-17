@@ -1,0 +1,15 @@
+rimmile nature recording provenance — verified 2026-10-13
+
+Crickets At Night - Clean sound by Defelozedd94
+https://freesound.org/people/Defelozedd94/sounds/522298/
+Recorded in Epalinges, Vaud, Switzerland. Background noise removed by the author.
+
+The individual sound page dedicates this recording under CC0 1.0 Universal:
+https://creativecommons.org/publicdomain/zero/1.0/
+https://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+CC0 permits reproduction, modification and redistribution, including commercial use.
+The author and source are recorded here voluntarily; no engine recording is included.
+
+rimmile uses a mono 40-second excerpt with short endpoint fades, encoded as MP3.
+Exact download URL, source/runtime SHA-256 hashes and processing are in nature-sources.json.

@@ -1,0 +1,14 @@
+Rimmile accepted engine recording banks
+Source set: https://github.com/markeasting/engine-audio/tree/1f87722e952b0637c1b1cbce8a414a7bb0f37baa/public/audio/458
+
+The project owner explicitly confirmed separate permission covering the four
+recordings for public game delivery on 2026-10-15. This is an owner attestation;
+no separate written permission document was supplied for independent review.
+The MIT notice in Engine-Audio-MIT.txt applies to adapted code and is not relied
+upon as proof of recording provenance. Rimmile grants no additional recording
+reuse rights and does not claim ownership or identify this set as Revuelto audio.
+
+The reviewed resource preserves the accepted stereo float32 runtime banks
+losslessly. Private originals and evaluation files are not published directly.
+See the public audio provenance for file hashes, processing and the permission
+basis. Retain the owner's permission evidence with private release records.

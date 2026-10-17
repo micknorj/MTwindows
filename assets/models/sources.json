@@ -1,0 +1,14 @@
+{
+  "vehicle": {
+    "resource": "rimmile-vehicle.bin",
+    "source": "https://www.cgtrader.com/free-3d-models/car/sport-car/lamborghiini-revuelto",
+    "creator": "AnatolianStudios",
+    "modelId": "7588572",
+    "license": "Royalty Free License (no AI)",
+    "terms": "https://www.cgtrader.com/pages/terms-and-conditions",
+    "use": "Incorporated unbranded game vehicle; no standalone model redistribution or AI training rights.",
+    "sourceSha256": "7980bcc8059c823377352bef1091088ede0385e6a8551712bdb90ce8cd024288",
+    "packaging": "Authenticated encrypted game resource; browser-side key is public. Not extraction-proof DRM.",
+    "ownerGameDeliveryApproval": "2026-10-15"
+  }
+}

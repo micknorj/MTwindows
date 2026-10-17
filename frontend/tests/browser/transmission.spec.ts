@@ -1,0 +1,29 @@
+import {test,expect} from './fixtures';
+const snap=(page:import('@playwright/test').Page)=>page.evaluate(()=>window.__rimmile.snapshot());
+async function start(page:import('@playwright/test').Page){await page.locator('#play').click();await expect(page.locator('#hud')).toBeVisible({timeout:60000});if(await page.locator('#play').isVisible())await page.locator('#play').click();}
+test.afterEach(async({page})=>{await page.evaluate(()=>window.dispatchEvent(new Event('pagehide')));});
+test('manual settings persist and explicit reverse requires W, while S only brakes',async({page})=>{
+ test.setTimeout(150000);await page.goto('/');await page.locator('#landing-settings').click();await expect(page.locator('[data-transmission="Automatic"]')).toHaveAttribute('aria-pressed','true');await page.locator('[data-transmission="Manual"]').click();
+ await page.locator('[data-graphics="resolution"][data-value="Low"]').click();await page.reload();await page.locator('#landing-settings').click();await expect(page.locator('[data-transmission="Manual"]')).toHaveAttribute('aria-pressed','true');
+ expect(await page.locator('#settings-page .editorial-content').evaluate(e=>e.getBoundingClientRect().width)).toBe(768);
+ for(const [action,label] of Object.entries({shiftUp:'Q',shiftDown:'E',direction:'R',recover:'T',lights:'L'}))await expect(page.locator(`[data-binding="${action}"]`)).toHaveText(label);
+ await page.locator('[data-binding="shiftUp"]').scrollIntoViewIfNeeded();await page.screenshot({path:`test-results/transmission-${test.info().project.name}.png`});await page.locator('#settings-back').click();await start(page);expect((await snap(page)).drivetrain.mode).toBe('Manual');
+ await page.keyboard.press('e');await expect(page.locator('#transmission-status')).toHaveText('Manual · Gear 1');await page.keyboard.press('q');expect((await snap(page)).drivetrain.gear).toBe(2);await page.waitForTimeout(350);await page.keyboard.press('e');expect((await snap(page)).drivetrain.gear).toBe(1);
+ await page.keyboard.down('w');await expect.poll(async()=>(await snap(page)).speed).toBeGreaterThan(4);await page.keyboard.up('w');await page.keyboard.press('r');expect((await snap(page)).drivetrain.direction).toBe('Drive');await expect(page.locator('#transmission-status')).toContainText('Slow down');
+ await page.keyboard.press('t');await page.keyboard.down('s');await page.waitForTimeout(1200);await page.keyboard.up('s');expect((await snap(page)).speed).toBe(0);expect((await snap(page)).drivetrain.direction).toBe('Drive');
+ await page.keyboard.press('r');expect((await snap(page)).drivetrain.direction).toBe('Reverse');await page.waitForTimeout(600);expect((await snap(page)).speed).toBe(0);await page.keyboard.press('q');expect((await snap(page)).drivetrain.gear).toBe(-1);
+ await page.keyboard.down('w');await expect.poll(async()=>(await snap(page)).speed).toBeLessThan(-2);await page.keyboard.up('w');expect((await snap(page)).drivetrain.rpm).toBeLessThan(1000);expect((await snap(page)).drivetrain.load).toBeLessThan(.01);
+ await page.keyboard.down('s');await expect.poll(async()=>Math.abs((await snap(page)).speed),{timeout:10000}).toBeLessThan(.1);await page.keyboard.up('s');await page.keyboard.press('r');expect((await snap(page)).drivetrain.direction).toBe('Drive');
+ await page.keyboard.press('Escape');await page.locator('#landing-settings').click();await page.locator('[data-transmission="Automatic"]').click();await page.locator('#settings-back').click();await start(page);await page.keyboard.press('q');expect((await snap(page)).drivetrain.gear).toBe(1);expect((await snap(page)).drivetrain.mode).toBe('Automatic');
+});
+test('legacy controls migrate, new actions remap without conflicts and reset restores all defaults',async({page})=>{
+ await page.goto('/');await page.evaluate(()=>localStorage.setItem('rimmile.preferences.v1',JSON.stringify({version:2,bindings:{accelerate:['KeyW','ArrowUp'],brake:['KeyS','ArrowDown'],left:['KeyA','ArrowLeft'],right:['KeyD','ArrowRight'],recover:['KeyR'],lights:['KeyE']},volumes:{engine:.42}})));await page.reload();await page.locator('#landing-settings').click();
+ await expect(page.locator('[data-binding="recover"]')).toHaveText('T');await expect(page.locator('[data-binding="lights"]')).toHaveText('L');
+ const assign=async(action:string,key:string)=>{await page.locator(`[data-binding="${action}"]`).click();await page.keyboard.press(key);};
+ await assign('shiftUp','r');await expect(page.locator('#binding-status')).toContainText('assigned to another');await page.keyboard.press('Escape');
+ for(const [action,key] of Object.entries({shiftUp:'u',shiftDown:'j',direction:'v',recover:'y',lights:'k'}))await assign(action,key);
+ await page.locator('[data-transmission="Manual"]').click();await page.reload();await page.locator('#landing-settings').click();for(const [action,key] of Object.entries({shiftUp:'U',shiftDown:'J',direction:'V',recover:'Y',lights:'K'}))await expect(page.locator(`[data-binding="${action}"]`)).toHaveText(key);
+ await page.locator('#settings-back').click();await start(page);await page.keyboard.press('u');expect((await snap(page)).drivetrain.gear).toBe(2);await page.waitForTimeout(350);await page.keyboard.press('j');expect((await snap(page)).drivetrain.gear).toBe(1);await page.keyboard.press('v');expect((await snap(page)).drivetrain.direction).toBe('Reverse');await page.keyboard.press('y');expect((await snap(page)).drivetrain.direction).toBe('Drive');
+ await page.keyboard.press('Escape');await page.locator('#landing-settings').click();await page.locator('#reset-controls').click();for(const [action,key] of Object.entries({shiftUp:'Q',shiftDown:'E',direction:'R',recover:'T',lights:'L'}))await expect(page.locator(`[data-binding="${action}"]`)).toHaveText(key);
+ const stored=await page.evaluate(()=>JSON.parse(localStorage.getItem('rimmile.preferences.v1')!));expect(stored.version).toBe(3);expect(stored.volumes.engine).toBe(.42);
+});

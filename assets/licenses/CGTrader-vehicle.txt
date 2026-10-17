@@ -1,0 +1,18 @@
+Incorporated Rimmile vehicle resource
+Source: AnatolianStudios, CGTrader model 7588572, Lamborghiini Revuelto
+https://www.cgtrader.com/free-3d-models/car/sport-car/lamborghiini-revuelto
+License shown by the source listing: Royalty Free License (no AI).
+Terms: https://www.cgtrader.com/pages/terms-and-conditions (21A and 21B).
+
+The source author retains model rights. Third-party marks/design rights are not
+claimed by Rimmile. The model is used as an unbranded incorporated game resource,
+not offered as a standalone GLB. No permission for standalone redistribution,
+resale or AI training is granted by Rimmile's source publication.
+
+The project owner explicitly approved public delivery of the optimized game
+resource on 2026-10-15 after disclosure that browser assets remain extractable.
+The protected master and optimized source GLB remain private and unchanged.
+Authenticated encryption packages the resource; its browser-side key is public.
+This is not extraction-proof DRM or a guarantee of all third-party clearances.
+The original asset's historical unverified-license metadata is preserved; this
+notice and the source provenance record document the later listing review.

@@ -1,0 +1,52 @@
+[
+  {
+    "file": "night-crickets.mp3",
+    "title": "Crickets At Night - Clean sound",
+    "author": "Defelozedd94",
+    "source": "https://freesound.org/people/Defelozedd94/sounds/522298/",
+    "download": "https://cdn.freesound.org/previews/522/522298_9084007-hq.mp3",
+    "license": "CC0 1.0 Universal",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "verified": "2026-10-13",
+    "sourceSha256": "8ae77b161d9e530739f31f4885941e6bdfff218060d530314b59383cbce0bdfa",
+    "runtimeSha256": "ba608282ea7625887598075d6a8d70e475a3ae13f133b4757e9a587ee42c10f6",
+    "processing": "50\u201390 s excerpt; mono 44.1 kHz MP3 at 80 kbit/s; 80 ms endpoint fades; metadata removed",
+    "location": "Epalinges, Vaud, Switzerland",
+    "runtimeBytes": 400762
+  },
+  {
+    "file": "rimmile-engine.bin",
+    "title": "Accepted stereo engine runtime banks",
+    "source": "https://github.com/markeasting/engine-audio/tree/1f87722e952b0637c1b1cbce8a414a7bb0f37baa/public/audio/458",
+    "license": "Owner-confirmed recording permission for public game delivery, 2026-10-15; not a grant of reuse rights to third parties. The code MIT notice does not establish recording provenance.",
+    "permissionBasis": "Project owner explicitly confirmed separate recording permission on 2026-10-15. No separate written license document was supplied for independent verification.",
+    "profile": "458 source set; not claimed to be a verified Revuelto V12 recording",
+    "processing": "Previously accepted stereo float32 WAV banks, unchanged; lossless gzip resource packing",
+    "banks": [
+      {
+        "id": "on-low",
+        "rpm": 5300,
+        "sha256": "79e8ae0ef62a4a02fff0be996f41f81a2419d2edd68fdeaea2907876af1824d7",
+        "bytes": 1646364
+      },
+      {
+        "id": "on-high",
+        "rpm": 7700,
+        "sha256": "64aa21133308cca2668daa90d6512e6433c136f37737b81799da8191f9b1457c",
+        "bytes": 3825140
+      },
+      {
+        "id": "off-low",
+        "rpm": 6900,
+        "sha256": "c02c89c58444743df8c9fc2b1783c0ce9e35fc0badf454236c9dfec3ac4abe5c",
+        "bytes": 862092
+      },
+      {
+        "id": "off-high",
+        "rpm": 7900,
+        "sha256": "699bcf5eebe2e8fd9884e1696fe057b81da82b43fd35dd0d7a8abb4fcf7b86c7",
+        "bytes": 3598060
+      }
+    ]
+  }
+]

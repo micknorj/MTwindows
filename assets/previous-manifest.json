@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "assets": [
+    {
+      "id": "audio/night-crickets.mp3",
+      "file": "audio/night-crickets.mp3",
+      "sha256": "ba608282ea7625887598075d6a8d70e475a3ae13f133b4757e9a587ee42c10f6",
+      "bytes": 400762,
+      "mime": "audio/mpeg",
+      "license": "CC0-1.0"
+    },
+    {
+      "id": "textures/surfaces/asphalt_02-albedo.webp",
+      "file": "textures/surfaces/asphalt_02-albedo.webp",
+      "sha256": "dccb21c5a18a416f4e5c857bea7e85bfcaa7e20f25d5e54eca2e50771de70710",
+      "bytes": 456828,
+      "mime": "image/webp",
+      "license": "CC0-1.0"
+    },
+    {
+      "id": "textures/surfaces/asphalt_02-surface.webp",
+      "file": "textures/surfaces/asphalt_02-surface.webp",
+      "sha256": "82f8a1d79ec610da06cd9f336eba667ba0ba98d8b437f99373b66a66e84ad70a",
+      "bytes": 2083900,
+      "mime": "image/webp",
+      "license": "CC0-1.0"
+    },
+    {
+      "id": "textures/surfaces/forest_floor-albedo.webp",
+      "file": "textures/surfaces/forest_floor-albedo.webp",
+      "sha256": "8aaaa3ed32e9b0714df187dc180949796c96a24332927fb35ea0b88c0b3c8957",
+      "bytes": 552148,
+      "mime": "image/webp",
+      "license": "CC0-1.0"
+    },
+    {
+      "id": "textures/surfaces/forest_floor-surface.webp",
+      "file": "textures/surfaces/forest_floor-surface.webp",
+      "sha256": "2d88db235b008c7c7667513ee19482f9f1ffeab6aa60583bcd4a0d893bff6d22",
+      "bytes": 3143524,
+      "mime": "image/webp",
+      "license": "CC0-1.0"
+    },
+    {
+      "id": "textures/surfaces/grass_path_2-albedo.webp",
+      "file": "textures/surfaces/grass_path_2-albedo.webp",
+      "sha256": "3ac3ae3484b2f606fdc79cc3aebb19355661fb34ca249b7f2a3314677e983d33",
+      "bytes": 442098,
+      "mime": "image/webp",
+      "license": "CC0-1.0"
+    },
+    {
+      "id": "textures/surfaces/grass_path_2-surface.webp",
+      "file": "textures/surfaces/grass_path_2-surface.webp",
+      "sha256": "bce2b130752b0e18a9e117f2aa07b0cd313b08ab182e81db7f812e672a510e2d",
+      "bytes": 2423312,
+      "mime": "image/webp",
+      "license": "CC0-1.0"
+    },
+    {
+      "id": "textures/surfaces/gravelly_sand-albedo.webp",
+      "file": "textures/surfaces/gravelly_sand-albedo.webp",
+      "sha256": "40879e969a1758388da302b336ab1a475de90566f3b4f8723b8b8af15546d0e7",
+      "bytes": 431406,
+      "mime": "image/webp",
+      "license": "CC0-1.0"
+    },
+    {
+      "id": "textures/surfaces/gravelly_sand-surface.webp",
+      "file": "textures/surfaces/gravelly_sand-surface.webp",
+      "sha256": "af03bb4264f17b79de7daf6ad25fcfae65677a1a389f327cb7591e90647bd945",
+      "bytes": 3052142,
+      "mime": "image/webp",
+      "license": "CC0-1.0"
+    },
+    {
+      "id": "textures/surfaces/rock_face-albedo.webp",
+      "file": "textures/surfaces/rock_face-albedo.webp",
+      "sha256": "d49066048b808ec4bd1fd70289f1bf995c298d5b8199d1f3e33bee58945dc19f",
+      "bytes": 197918,
+      "mime": "image/webp",
+      "license": "CC0-1.0"
+    },
+    {
+      "id": "textures/surfaces/rock_face-surface.webp",
+      "file": "textures/surfaces/rock_face-surface.webp",
+      "sha256": "98ac070e14417b1da209e5bd5b8d0f6dba008ed416b6fc3e5c148d54c3b11250",
+      "bytes": 2209048,
+      "mime": "image/webp",
+      "license": "CC0-1.0"
+    },
+    {
+      "id": "textures/tree-impostors.webp",
+      "file": "textures/tree-impostors.webp",
+      "sha256": "c9dee041fb5833f34c2b243cd18696be0df5880dc9bfe5d0ae1273014de6fd00",
+      "bytes": 1494342,
+      "mime": "image/webp",
+      "license": "All Rights Reserved"
+    }
+  ]
+}

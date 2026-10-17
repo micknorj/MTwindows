@@ -1,0 +1,158 @@
+[
+  {
+    "id": "asphalt_02",
+    "page": "https://polyhaven.com/a/asphalt_02",
+    "authors": {
+      "Rob Tuytel": "All"
+    },
+    "scale": "3M x 3M",
+    "license": "CC0-1.0",
+    "downloads": {
+      "ao": {
+        "size": 533336,
+        "md5": "db52e3eb4895bbf347246fe8d2d0ebe7",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/asphalt_02/asphalt_02_ao_1k.jpg"
+      },
+      "diff": {
+        "size": 731707,
+        "md5": "fa19772d4817754c3efab708c651f5a8",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/asphalt_02/asphalt_02_diff_1k.jpg"
+      },
+      "rough": {
+        "size": 544032,
+        "md5": "ec80a2929797c1b3ffc121c4f665585a",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/asphalt_02/asphalt_02_rough_1k.jpg"
+      },
+      "normal": {
+        "size": 2323825,
+        "md5": "910d4b3882858368622eaa1b973bb290",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/asphalt_02/asphalt_02_nor_gl_1k.png"
+      }
+    }
+  },
+  {
+    "id": "forest_floor",
+    "page": "https://polyhaven.com/a/forest_floor",
+    "authors": {
+      "eye-candy.xyz": "All"
+    },
+    "scale": null,
+    "license": "CC0-1.0",
+    "downloads": {
+      "ao": {
+        "size": 785094,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/forest_floor/forest_floor_ao_1k.jpg",
+        "md5": "882d6f7e0b0a1a27de4eb4ecfdc12649"
+      },
+      "diff": {
+        "size": 1329853,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/forest_floor/forest_floor_diff_1k.jpg",
+        "md5": "d67f308e4b8be6a65989e8dc76ec40fe"
+      },
+      "rough": {
+        "size": 736353,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/forest_floor/forest_floor_rough_1k.jpg",
+        "md5": "446092b42424c7bcf15994d651949546"
+      },
+      "normal": {
+        "size": 6034422,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/forest_floor/forest_floor_nor_gl_1k.png",
+        "md5": "be619d4bba96b04132f29338f9b14ea2"
+      }
+    }
+  },
+  {
+    "id": "rock_face",
+    "page": "https://polyhaven.com/a/rock_face",
+    "authors": {
+      "Greg Zaal": "Photography",
+      "Dario Barresi": "Processing"
+    },
+    "scale": null,
+    "license": "CC0-1.0",
+    "downloads": {
+      "ao": {
+        "size": 501528,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rock_face/rock_face_ao_1k.jpg",
+        "md5": "389c0100958b6155a83d9c8bb3f797d4"
+      },
+      "diff": {
+        "size": 732721,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rock_face/rock_face_diff_1k.jpg",
+        "md5": "220c637db6056b45e7c0a17e6ed8514e"
+      },
+      "rough": {
+        "size": 224371,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rock_face/rock_face_rough_1k.jpg",
+        "md5": "9c0ebb95db6ce5ec16abca0899e506a2"
+      },
+      "normal": {
+        "size": 5796887,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/rock_face/rock_face_nor_gl_1k.png",
+        "md5": "9d13dc8de098d5c2a5bee844c317b946"
+      }
+    }
+  },
+  {
+    "id": "gravelly_sand",
+    "page": "https://polyhaven.com/a/gravelly_sand",
+    "authors": {
+      "Dario Barresi": "All"
+    },
+    "scale": null,
+    "license": "CC0-1.0",
+    "downloads": {
+      "ao": {
+        "size": 886101,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/gravelly_sand/gravelly_sand_ao_1k.jpg",
+        "md5": "a3195bcae294f918ed2e2c0975cd6a2d"
+      },
+      "diff": {
+        "size": 1062525,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/gravelly_sand/gravelly_sand_diff_1k.jpg",
+        "md5": "16b7593a26ce1bd43f1d95e61dc25f05"
+      },
+      "rough": {
+        "size": 419895,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/gravelly_sand/gravelly_sand_rough_1k.jpg",
+        "md5": "1152ab34b85ec42a5d4d6c8ed2c1100b"
+      },
+      "normal": {
+        "size": 6086837,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/gravelly_sand/gravelly_sand_nor_gl_1k.png",
+        "md5": "b1c8547758adb7265b9f7a8c0a4921e4"
+      }
+    }
+  },
+  {
+    "id": "grass_path_2",
+    "page": "https://polyhaven.com/a/grass_path_2",
+    "authors": {
+      "Rob Tuytel": "All"
+    },
+    "scale": null,
+    "license": "CC0-1.0",
+    "downloads": {
+      "ao": {
+        "size": 386167,
+        "md5": "217af3461351d2e55b3c9dc565153a0b",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/grass_path_2/grass_path_2_ao_1k.jpg"
+      },
+      "diff": {
+        "size": 716010,
+        "md5": "48cebe95af233211c9469a9bfe2f42f2",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/grass_path_2/grass_path_2_diff_1k.jpg"
+      },
+      "rough": {
+        "size": 335245,
+        "md5": "a3f245c716d0f2bbdece65a38b1bcd4a",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/grass_path_2/grass_path_2_rough_1k.jpg"
+      },
+      "normal": {
+        "size": 2199966,
+        "md5": "142cdf04904b65726dd44ecf60289b77",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/grass_path_2/grass_path_2_nor_gl_1k.png"
+      }
+    }
+  }
+]

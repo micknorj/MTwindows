@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="referrer" content="no-referrer" />
+  <meta name="theme-color" content="#101715" />
+  <meta name="description" content="Rimmile — endless nighttime driving, from Mick's Lab." />
+  <title>Rimmile · Mick's Lab</title>
+  <link rel="stylesheet" href="/src/styles/main.css" />
+</head>
+<body>
+  <div id="scene" hidden><canvas id="game" aria-label="Driving scene" tabindex="-1"></canvas></div>
+  <div id="menu-overlay" aria-hidden="true"></div>
+  <main id="landing" class="menu-screen">
+    <div class="menu-content">
+      <h1>Rimmile</h1>
+      <nav class="menu-actions" aria-label="Main menu">
+        <button id="play" class="menu-action">- Drive -</button>
+        <button id="landing-settings" class="menu-action" aria-label="Settings">- Settings -</button>
+        <button id="landing-about" class="menu-action" aria-label="About">- About -</button>
+      </nav>
+    </div>
+  </main>
+  <section id="settings-page" class="content-screen" aria-labelledby="settings-title" hidden>
+    <div class="editorial-content">
+      <button id="settings-back" class="back">Back</button>
+      <h2 id="settings-title">Settings</h2>
+      <section class="settings-section" aria-labelledby="graphics-title">
+        <h3 id="graphics-title">Graphics</h3>
+        <div class="setting-row"><span id="resolution-label">Render Resolution</span><div class="options" role="group" aria-labelledby="resolution-label"><button type="button" data-graphics="resolution" data-value="Auto" aria-pressed="true">Auto</button><button type="button" data-graphics="resolution" data-value="Low" aria-pressed="false">Low</button><button type="button" data-graphics="resolution" data-value="Medium" aria-pressed="false">Medium</button><button type="button" data-graphics="resolution" data-value="High" aria-pressed="false">High</button></div></div>
+        <div class="setting-row"><span id="shadows-label">Shadows</span><div class="options" role="group" aria-labelledby="shadows-label"><button type="button" data-graphics="shadows" data-value="Low" aria-pressed="false">Low</button><button type="button" data-graphics="shadows" data-value="Medium" aria-pressed="true">Medium</button><button type="button" data-graphics="shadows" data-value="High" aria-pressed="false">High</button></div></div>
+        <div class="setting-row"><span id="trees-label">Tree Detail</span><div class="options" role="group" aria-labelledby="trees-label"><button type="button" data-graphics="trees" data-value="Low" aria-pressed="false">Low</button><button type="button" data-graphics="trees" data-value="Medium" aria-pressed="true">Medium</button><button type="button" data-graphics="trees" data-value="High" aria-pressed="false">High</button></div></div>
+        <div class="setting-row"><span id="grass-label">Grass Detail</span><div class="options" role="group" aria-labelledby="grass-label"><button type="button" data-graphics="grass" data-value="Low" aria-pressed="false">Low</button><button type="button" data-graphics="grass" data-value="Medium" aria-pressed="true">Medium</button><button type="button" data-graphics="grass" data-value="High" aria-pressed="false">High</button></div></div>
+        <div class="setting-row"><span id="terrain-label">Terrain Detail</span><div class="options" role="group" aria-labelledby="terrain-label"><button type="button" data-graphics="terrain" data-value="Low" aria-pressed="false">Low</button><button type="button" data-graphics="terrain" data-value="Medium" aria-pressed="true">Medium</button><button type="button" data-graphics="terrain" data-value="High" aria-pressed="false">High</button></div></div>
+        <div class="setting-row"><span id="distant-label">Distant Scenery</span><div class="options" role="group" aria-labelledby="distant-label"><button type="button" data-graphics="distant" data-value="Low" aria-pressed="false">Low</button><button type="button" data-graphics="distant" data-value="Medium" aria-pressed="true">Medium</button><button type="button" data-graphics="distant" data-value="High" aria-pressed="false">High</button></div></div>
+        <div class="setting-row"><span id="fullscreen-label">Fullscreen</span><div id="fullscreen" class="options" role="group" aria-labelledby="fullscreen-label"><button data-fullscreen="off" aria-pressed="true">Off</button><button data-fullscreen="on" aria-pressed="false">On</button></div></div>
+        <p id="graphics-status" class="status" role="status"></p>
+      </section>
+      <fieldset id="audio-settings" class="settings-section"><legend id="audio-title">Audio</legend>
+        <div class="setting-row"><label for="master">Master Audio</label><div class="slider-control"><input id="master" type="range" min="0" max="100" value="70" /><output id="master-value" for="master">70%</output></div></div>
+        <div class="setting-row"><label for="engine">Engine Audio</label><div class="slider-control"><input id="engine" type="range" min="0" max="100" value="70" /><output id="engine-value" for="engine">70%</output></div></div>
+        <div class="setting-row"><label for="environment">Environment Audio</label><div class="slider-control"><input id="environment" type="range" min="0" max="100" value="65" /><output id="environment-value" for="environment">65%</output></div></div>
+        <p id="audio-status" class="status" role="status"></p>
+      </fieldset>
+      <section class="settings-section" aria-labelledby="handling-title"><h3 id="handling-title">Handling</h3>
+        <div class="setting-row"><label for="handling-balance">Handling Balance</label><div class="handling-control"><div class="slider-control"><input id="handling-balance" type="range" min="-100" max="100" value="0" /><output id="handling-balance-value" for="handling-balance">Balanced</output></div><div class="range-labels"><span>Understeer</span><span>Oversteer</span></div></div></div>
+        <div class="setting-row"><label for="handling-grip">Grip</label><div class="handling-control"><div class="slider-control"><input id="handling-grip" type="range" min="-100" max="100" value="0" /><output id="handling-grip-value" for="handling-grip">Normal</output></div><div class="range-labels"><span>Low</span><span>High</span></div></div></div>
+        <div class="setting-row"><span id="transmission-label">Transmission</span><div class="options" role="group" aria-labelledby="transmission-label"><button type="button" data-transmission="Automatic" aria-pressed="true">Automatic</button><button type="button" data-transmission="Manual" aria-pressed="false">Manual</button></div></div>
+        <div class="setting-row reset-row"><button id="reset-handling">Reset Handling</button></div>
+      </section>
+      <section class="settings-section" aria-labelledby="controls-title"><h3 id="controls-title">Controls</h3>
+        <div class="setting-row"><span>Accelerate</span><button data-binding="accelerate" aria-label="Remap Accelerate">W / Arrow Up</button></div>
+        <div class="setting-row"><span>Brake</span><button data-binding="brake" aria-label="Remap Brake">S / Arrow Down</button></div>
+        <div class="setting-row"><span>Steer Left</span><button data-binding="left" aria-label="Remap Steer Left">A / Arrow Left</button></div>
+        <div class="setting-row"><span>Steer Right</span><button data-binding="right" aria-label="Remap Steer Right">D / Arrow Right</button></div>
+        <div class="setting-row"><span>Shift Up (+)</span><button data-binding="shiftUp" aria-label="Remap Shift Up">Q</button></div>
+        <div class="setting-row"><span>Shift Down (−)</span><button data-binding="shiftDown" aria-label="Remap Shift Down">E</button></div>
+        <div class="setting-row"><span>Drive / Reverse</span><button data-binding="direction" aria-label="Remap Drive / Reverse">R</button></div>
+        <div class="setting-row"><span>Return to Road</span><button data-binding="recover" aria-label="Remap Return to Road">T</button></div>
+        <div class="setting-row"><span>Lights On / Off</span><button data-binding="lights" aria-label="Remap Lights On / Off">L</button></div>
+        <div class="setting-row reset-row"><button id="reset-controls">Reset Controls</button></div>
+        <p id="binding-status" class="status" role="status"></p>
+      </section>
+    </div>
+  </section>
+  <section id="about-page" class="content-screen" aria-labelledby="about-title" hidden>
+    <div class="editorial-content about">
+      <button id="about-back" class="back">Back</button>
+      <div class="about-content">
+        <h2 id="about-title">About</h2>
+        <p>Rimmile is an endless nighttime drive through forests, rivers and highland roads. Take your time, or open the throttle. There is no destination.</p>
+        <p>This website runs in your browser. Your preferences and total driving distance are saved only in this browser. No analytics or accounts.</p>
+        <footer class="site-credit">© 2026 micknorj · Mick's Lab · <a href="https://github.com/micknorj" target="_blank" rel="noopener noreferrer">GitHub</a></footer>
+      </div>
+    </div>
+  </section>
+  <div id="hud" hidden>
+    <div class="speed" aria-label="Speed"><span id="speed">0</span><span class="unit">km/h</span></div>
+    <div class="hud-actions"><button id="pause" aria-label="Pause"><span class="pause-icon" aria-hidden="true"></span></button></div>
+    <p id="transmission-status" class="transmission-notice" role="status" aria-live="polite"></p>
+    <p id="recovery-status" role="status" aria-live="polite"></p>
+  </div>
+  <p id="distance-milestone" class="site-error" hidden></p>
+  <p id="load-status" class="site-error" role="status" aria-live="polite"></p>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

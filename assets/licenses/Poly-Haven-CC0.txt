@@ -1,0 +1,15 @@
+Surface textures by Poly Haven contributors, released under CC0 1.0.
+Redistribution and modification are permitted, including commercial use.
+License checked 2026-10-12: https://polyhaven.com/license
+CC0 legal code: https://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+asphalt_02 (Rob Tuytel): https://polyhaven.com/a/asphalt_02
+forest_floor: https://polyhaven.com/a/forest_floor
+grass_path_2: https://polyhaven.com/a/grass_path_2
+gravelly_sand: https://polyhaven.com/a/gravelly_sand
+rock_face: https://polyhaven.com/a/rock_face
+
+The accompanying poly-haven-sources.json records authors, source URLs and
+checksums. Original downloads are verified before packing. Albedo is sRGB;
+the lossless surface pack holds normal XY, roughness and ambient occlusion.
+No Poly Haven logo, website content, or sample render is included.
